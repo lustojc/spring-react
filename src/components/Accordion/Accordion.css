@@ -1,0 +1,79 @@
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #191e1e;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding-right: 5px;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  font-size: 35px;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: #191e1e;
+  overflow: auto;
+  transition: max-height 0.6s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 10px 0;
+  color: #98afae;
+}
+
+a:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.devTools {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 550px) {
+  .accordion__title {
+    font-size: 25px;
+  }
+
+  .accordion__text {
+    font-size: 18px;
+  }
+}

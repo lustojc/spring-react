@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Content = ({ element, content, devTools }) => {
+const Content = ({ element, content, devTools, id }) => {
   return (
     <>
       {content.map((el, index) => {

@@ -39,3 +39,9 @@
   color: #bbbcbe;
   font-size: 18px;
 }
+
+@media screen and (max-width: 800px) {
+  .card-item {
+    width: 100%;
+  }
+}

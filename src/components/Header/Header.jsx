@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MenuItems } from "./MenuItems";
 import logo from "../../assets/img/spring-logo.svg";
 import "./header.css";
@@ -9,7 +9,16 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 const Header = () => {
   
   const [isMobile, setIsMobile] = useState(false)
+  
+  
 
+  useEffect(() => {
+    if(isMobile){
+    document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  },[isMobile] );
 
   return (
     <header>
@@ -18,7 +27,7 @@ const Header = () => {
           <a className="mg-bt_20" href="">
             <img className="logo" src={logo} alt="Spring-logo" />
           </a>
-          <div id="navbar" onClick={()=> setIsMobile(false)} className={isMobile ? "navbar-mobile" : "navbar"}>
+          <div id="navbar" className={isMobile ? "navbar-mobile" : "navbar"}>
             <div className="dp-flex jc-betw" id="dropdown">
               {isMobile 
               ? <MobileMenu/>
@@ -31,7 +40,7 @@ const Header = () => {
         </div>
       </nav>
       <div onClick={()=> setIsMobile(!isMobile)} className={isMobile ? "burger-menu open" : "burger-menu"}>
-          {isMobile ? <div  className="burger-line"></div> : <div className="burger-line dp-hide"></div>}
+          {isMobile ? <div className="burger-line"></div> : <div className="burger-line dp-hide"></div>}
       </div>
     </header>
   );
