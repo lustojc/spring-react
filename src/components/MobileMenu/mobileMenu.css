@@ -1,17 +1,17 @@
 .nav-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:  #191e1e;
-    padding: 60px 70px 0 50px;
-    display: none;
-    overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #191e1e;
+  padding: 60px 70px 0 50px;
+  display: none;
+  overflow: auto;
 }
 
-@media screen and (max-width: 900px){
-    .nav-mobile {
-        display: block;
-    }
+@media screen and (max-width: 900px) {
+  .nav-mobile {
+    display: block;
+  }
 }

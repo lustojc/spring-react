@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./cards.css";
 import "../../App.css";
 import { CardItems } from "./CardItems";
-import Loader from "../UI/Loader";
+import Loader from "../common/Loader/Loader";
 
-const Cards = ({ valueInput, setValue }) => {
+const Cards = ({ valueInput }) => {
   let notFound = false;
   const renderCard = CardItems.filter((card) => {
     if (valueInput === "") {
