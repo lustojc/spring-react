@@ -1,10 +1,16 @@
 import React from 'react'
+import Accordion from '../Accordion/Accordion'
+import { MenuItems } from '../Header/MenuItems'
 import "./mobileMenu.css"
 
 const MobileMenu = () => {
     return (
         <div className="nav-mobile">
-            123
+           {MenuItems.map((el)=> {
+               return (
+                   <Accordion key={el.id} text={el.title} dev={el.devTools} content={el.options} />
+               )
+           })}
         </div>
     )
 }

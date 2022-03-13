@@ -2,9 +2,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 100px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background:  #191e1e;
-    overflow: hidden;
+    padding: 60px 70px 0 50px;
+    display: none;
+    overflow: auto;
+}
+
+@media screen and (max-width: 900px){
+    .nav-mobile {
+        display: block;
+    }
 }

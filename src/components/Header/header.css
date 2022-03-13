@@ -12,6 +12,10 @@ a img {
   margin-bottom: 20px;
 }
 
+.hd {
+  overflow: hidden;
+}
+
 .navbar {
   display: inline-block;
   position: relative;
@@ -111,7 +115,7 @@ a img {
 .burger-menu {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -160,7 +164,12 @@ a img {
 }
 
 
+
 @media screen and (max-width: 900px) {
+  .burger-menu {
+    display: block;
+  }
+
   .dp-hide {
     display: block;
   }
@@ -173,4 +182,6 @@ a img {
    display: block;
    flex-direction: column;
   }
+
+  
 }
