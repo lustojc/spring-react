@@ -1,0 +1,41 @@
+.card {
+  background: #262a2d;
+  padding: 50px 20px;
+  min-height: 1000px;
+}
+
+.card-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  width: 48.5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 40px 30px 70px 20px;
+  background: #1b1f23;
+  border-radius: 5px;
+  border: 1px solid #1b1f23;
+}
+
+.card-item:hover {
+  border: 1px solid grey;
+}
+
+.card-item img {
+  margin-right: 20px;
+}
+
+.card-title {
+  color: white;
+  font-size: 24px;
+}
+
+.card-text {
+  margin: 16px 0;
+  line-height: 1.5;
+  color: #bbbcbe;
+  font-size: 18px;
+}

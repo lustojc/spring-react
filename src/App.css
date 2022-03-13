@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Open Sans, sans-serif;
+}
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.dp-flex {
+  display: flex;
+}
+
+.jc-betw {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+}
+
+.nt-message {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-top: 150px;
+}
+
+.jc-center {
+  justify-content: center;
+}

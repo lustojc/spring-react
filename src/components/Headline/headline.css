@@ -1,0 +1,23 @@
+.info {
+  background: #1b1f23;
+}
+
+.info-headline {
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+.info-headline h1 {
+  color: white;
+  font-size: 55px;
+}
+
+.info-text {
+  max-width: 1100px;
+  padding-bottom: 70px;
+}
+
+.info-text span {
+  color: #bbbcbe;
+  font-size: 25px;
+  line-height: 1.7;
+}
