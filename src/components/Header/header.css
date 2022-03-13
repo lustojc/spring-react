@@ -8,6 +8,10 @@ a img {
   height: 48px;
 }
 
+.mg-bt_20 {
+  margin-bottom: 20px;
+}
+
 .navbar {
   display: inline-block;
   position: relative;
@@ -102,4 +106,71 @@ a img {
   height: 18px;
   margin-left: 2px;
   padding-top: 6px;
+}
+
+.burger-menu {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 40px;
+  padding-right: 20px;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  color: white;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+.burger-line::before,
+.burger-line::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+.burger-line::before {
+  transform: translateY(-8px);
+}
+.burger-line::after {
+  transform: translateY(8px);
+}
+
+/* ANIMATION */
+.burger-menu.open .burger-line {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.burger-menu.open .burger-line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.burger-menu.open .burger-line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.dp-hide {
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  .dp-hide {
+    display: block;
+  }
+
+  .navbar {
+    display: none
+  };
+
+  .navbar-mobile {
+   display: block;
+   flex-direction: column;
+  }
 }

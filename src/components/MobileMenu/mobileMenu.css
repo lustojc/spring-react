@@ -1,0 +1,10 @@
+.nav-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    width: 100%;
+    height: 100vh;
+    background:  #191e1e;
+    overflow: hidden;
+}
