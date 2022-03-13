@@ -8,7 +8,6 @@ const MainSection = () => {
 
   const [value, setValue] = useState("");
 
-  
   return (
     <section>
       <div className="card">
