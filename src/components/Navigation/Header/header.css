@@ -163,8 +163,6 @@ a img {
   display: none;
 }
 
-
-
 @media screen and (max-width: 900px) {
   .burger-menu {
     display: block;
@@ -175,13 +173,11 @@ a img {
   }
 
   .navbar {
-    display: none
-  };
-
-  .navbar-mobile {
-   display: block;
-   flex-direction: column;
+    display: none;
   }
 
-  
+  .navbar-mobile {
+    display: block;
+    flex-direction: column;
+  }
 }

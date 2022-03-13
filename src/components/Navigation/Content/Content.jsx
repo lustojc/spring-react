@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Content = ({ element, content, devTools, id }) => {
+const Content = ({ element, content, devTools }) => {
   return (
     <>
       {content.map((el, index) => {
@@ -16,7 +16,9 @@ const Content = ({ element, content, devTools, id }) => {
         <>
           <div>Development Tools</div>
           {devTools.map((el, i) => (
-            <a key={i} href="#">{el}</a>
+            <a key={i} href="#">
+              {el}
+            </a>
           ))}
         </>
       ) : null}
