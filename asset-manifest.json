@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spring-react/static/css/main.13dc7566.css",
-    "main.js": "/spring-react/static/js/main.2e3597de.js",
+    "main.js": "/spring-react/static/js/main.06d22772.js",
     "static/js/787.ad66fa41.chunk.js": "/spring-react/static/js/787.ad66fa41.chunk.js",
     "static/media/spring-graphql.svg": "/spring-react/static/media/spring-graphql.2c1753d2300804c2108d12f184758141.svg",
     "static/media/spring-framework.svg": "/spring-react/static/media/spring-framework.3459f100e370bff957ffef7cc6ca976c.svg",
@@ -13,11 +13,11 @@
     "static/media/spring-data.svg": "/spring-react/static/media/spring-data.a70fab0e48b77a3c08f87f1382a85556.svg",
     "static/media/spring-security.svg": "/spring-react/static/media/spring-security.1c141abb42cce353c52a49ce66ac617c.svg",
     "main.13dc7566.css.map": "/spring-react/static/css/main.13dc7566.css.map",
-    "main.2e3597de.js.map": "/spring-react/static/js/main.2e3597de.js.map",
+    "main.06d22772.js.map": "/spring-react/static/js/main.06d22772.js.map",
     "787.ad66fa41.chunk.js.map": "/spring-react/static/js/787.ad66fa41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13dc7566.css",
-    "static/js/main.2e3597de.js"
+    "static/js/main.06d22772.js"
   ]
 }
