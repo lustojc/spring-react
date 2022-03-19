@@ -4,7 +4,7 @@ import { Navigate } from "react-router";
 import Home from "../Home/Home";
 
 const ProtectedRoute = () => {
-  const auth = useSelector((store) => store.authenticated);
+  const auth = useSelector((store) => store.authenticated.authenticated);
 
   return auth ? <Home></Home> : <Navigate to="/login" />;
 };

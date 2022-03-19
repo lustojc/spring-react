@@ -3,7 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import store from "./store/store";
+import store from "./store/rootReducer";
+
 
 function App() {
   return (

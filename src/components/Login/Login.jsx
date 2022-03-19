@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { LOGIN_USER } from "../../store/types";
+import { LOGIN_USER } from "../../store/actions";
 import "./Login.css";
 
 const Login = () => {
   const dispatch = useDispatch();
   const history = useNavigate();
-  const log = useSelector((store) => store.login);
-  const pass = useSelector((store) => store.pass);
+  const log = useSelector((store) => store.authenticated.login);
+  const pass = useSelector((store) => store.authenticated.pass);
 
   const [inputs, setInputs] = useState({ username: "", password: "" });
 
@@ -30,7 +30,9 @@ const Login = () => {
 
   return (
     <div className="App">
-     <h1>Welcome back, <span>dear friend!</span></h1>
+      <h1>
+        Welcome back, <span>dear friend!</span>
+      </h1>
       <form onSubmit={login} className="login-form">
         <h4 className="form-title">Login</h4>
         <div className="form-control">

@@ -1,0 +1,19 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+.btn-style {
+    background: rgb(12, 179, 48);
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+
