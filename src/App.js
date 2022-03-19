@@ -9,9 +9,8 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/home" element={<ProtectedRoute />}>
-        </Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/home" element={<ProtectedRoute />} />
       </Routes>
     </Provider>
   );
