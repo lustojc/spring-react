@@ -1,0 +1,59 @@
+.form-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    background-color:  #1b1f23;
+    border: 3px solid grey;
+    border-radius: 15px;
+    padding: 50px;
+    z-index: 12;
+}
+
+.form-wrapper h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    z-index: 12; 
+}
+
+.form input {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    height: 30px;
+    outline: none;
+}
+
+.form textarea {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    height: 200px;
+    outline: none;
+}
+
+.form button {
+    width: 100px;
+    background-color: rgb(12, 179, 48);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.overlay{
+    background: rgba(0,0,0, 0.45);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
