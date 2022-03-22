@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GET_CARDS } from "../../store/actions";
+import { GET_CARDS } from "../../store/actions/actions";
 import "./FormCard.css";
 
 const FormCard = ({ overlay, setHide }) => {
-  const cardsInfo = useSelector((state) => state.cardData);
   const dispatch = useDispatch();
+
+  const cardsInfo = useSelector((state) => state.cardData);
+  
   const [inputData, setInputData] = useState({
     headline: "",
     description: "",
     id: Math.random(),
     img: require("../../assets/img/spring-framework.svg").default,
   });
-  console.log(cardsInfo);
 
+  useEffect(() => {
+    return () => {
+      setHide(!overlay);
+    };
+  }, [cardsInfo]);
 
   function onChangeHeadline(e) {
     setInputData({ ...inputData, headline: e.target.value });
@@ -27,12 +33,6 @@ const FormCard = ({ overlay, setHide }) => {
     e.preventDefault();
     dispatch({ type: GET_CARDS, payload: inputData });
   }
-
-  useEffect(() => {
-    return () => {
-      setHide(!overlay)
-    }
-  }, [cardsInfo])
 
   return (
     <>
@@ -51,9 +51,7 @@ const FormCard = ({ overlay, setHide }) => {
             name="description"
             placeholder="Описание"
           ></textarea>
-          <button type="submit">
-            Добавить карточку
-          </button>
+          <button type="submit">Добавить карточку</button>
         </form>
       </div>
       <div onClick={() => setHide(!overlay)} className="overlay"></div>
