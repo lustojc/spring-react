@@ -1,9 +1,10 @@
 import { composeWithDevTools } from "redux-devtools-extension";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
+
+import { authReducer } from "./authReducer";
 import { cardReducer } from "./cardReducer";
 
-const { combineReducers, createStore, applyMiddleware } = require("redux");
-const { authReducer } = require("./authReducer");
 
 const rootReducer = combineReducers({
     authenticated: authReducer,
