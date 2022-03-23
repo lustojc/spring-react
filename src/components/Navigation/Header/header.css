@@ -158,7 +158,17 @@ a img {
 .burger-menu.open .burger-line::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
-
+.exit__btn {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 5px 25px 5px;
+  cursor: pointer;
+  border: 1px solid green;
+  padding: 3px;
+  border-radius: 15px;
+  background: green;
+}
 .dp-hide {
   display: none;
 }

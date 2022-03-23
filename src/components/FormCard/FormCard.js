@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GET_CARDS } from "../../store/actions/actions";
+import { getCards, getUserCards } from "../../store/reducers/cardReducer";
 import "./FormCard.css";
 
 const FormCard = ({ overlay, setHide }) => {
   const dispatch = useDispatch();
 
-  const cardsInfo = useSelector((state) => state.cardData);
-  
+  const cardsInfo = useSelector((state) => state.card.cards);
+
   const [inputData, setInputData] = useState({
     headline: "",
     description: "",
     id: Math.random(),
-    img: require("../../assets/img/spring-framework.svg").default,
-  });
+    img: "../../assets/img/spring-cloud.svg",
 
+  });
+  console.log(inputData);
   useEffect(() => {
     return () => {
       setHide(!overlay);
@@ -31,7 +32,7 @@ const FormCard = ({ overlay, setHide }) => {
 
   function addCard(e) {
     e.preventDefault();
-    dispatch({ type: GET_CARDS, payload: inputData });
+    dispatch(getUserCards(inputData));
   }
 
   return (

@@ -33,6 +33,7 @@
     margin-bottom: 15px;
     text-align: center;
     color: #fff;
+    font-size: 30px;
   }
   
   .form-control {
@@ -55,4 +56,21 @@
     background: green;
     color: #fff;
     cursor: pointer;
+    
   }
+
+.login-nav__btn {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.login-nav__btn div {
+  margin-left: 40px;
+  
+}
+
+.login-nav__btn div a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}

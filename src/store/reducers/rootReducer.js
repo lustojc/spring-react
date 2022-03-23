@@ -7,8 +7,8 @@ import { cardReducer } from "./cardReducer";
 
 
 const rootReducer = combineReducers({
-    authenticated: authReducer,
-    cardData: cardReducer,
+    user: authReducer,
+    card: cardReducer,
 });
 
 const store = createStore(
