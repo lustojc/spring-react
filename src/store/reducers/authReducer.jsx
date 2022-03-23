@@ -1,21 +1,30 @@
-import { LOGIN_USER } from "../actions/actions";
+import { SET_USER } from "../actions/actions";
+import { LOGOUT } from "../actions/actions";
 
 const initialState = {
-  authenticated: false,
-  login: "Admin",
-  pass: "1234",
+  currentUser: {},
+  isAuth: false
 };
 
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_USER:
+    case SET_USER:
       return {
         ...state,
-        authenticated: true,
-        login: action.payload,
-        pass: action.payload,
+        isAuth: true,
+        currentUser: action.payload,
+        
       };
+    case LOGOUT:
+      return {
+        ...state,
+        currentUser: {},
+        isAuth: false,
+      }
     default:
       return state;
   }
 };
+
+export const setUser = (user) => ({type: SET_USER, payload: user});
+export const logout = () => ({type: LOGOUT})

@@ -1,18 +1,29 @@
-import { Provider } from "react-redux";
-import { Route, Routes } from "react-router-dom";
+import { Provider, useSelector } from "react-redux";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import store from "./store/reducers/rootReducer";
+import Registration from "./components/Registration/Registration";
 
 function App() {
+
+  const isAuth = useSelector(state => state.user.isAuth)
+
   return (
-    <Provider store={store}>
-      <Routes>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/home" element={<ProtectedRoute />} />
-      </Routes>
-    </Provider>
+    <>
+    {!isAuth ?
+    <Routes>
+      <Route path='registration' element={<Registration/>}/>
+      <Route path="login" element={<Login/>}/>
+      <Route path="*" element={<Navigate to="/login" replace />} />
+    </Routes>
+    :
+    <Routes>
+      <Route path="*" element={<Navigate to="/home" replace />} />
+      <Route path='/home' element={<ProtectedRoute/>}/>
+    </Routes>
+    }
+    </>
   );
 }
 

@@ -1,60 +1,54 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { LOGIN_USER } from "../../store/actions/actions";
+import { NavLink } from "react-router-dom";
+import { login } from "../../store/async/auth";
+import Input from "../common/Input/Input";
 import "./Login.css";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const history = useNavigate();
-  const log = useSelector((store) => store.authenticated.login);
-  const pass = useSelector((store) => store.authenticated.pass);
-
-  const [inputs, setInputs] = useState({ username: "", password: "" });
-
-  function onChangeLogin(e) {
-    setInputs({ ...inputs, username: e.target.value });
-  }
-
-  function onChangePassword(e) {
-    setInputs({ ...inputs, password: e.target.value });
-  }
-
-  function login(event) {
-    event.preventDefault();
-    if (inputs.username === log && inputs.password === pass) {
-      dispatch({ type: LOGIN_USER });
-      history("/home");
-    }
-  }
+  const isAuth = useSelector((state) => state.user.isAuth);
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="App">
       <h1>
         Welcome back, <span>dear friend!</span>
       </h1>
-      <form onSubmit={login} className="login-form">
-        <h4 className="form-title">Login</h4>
+      <div className="login-form">
+        <h4 className="form-title">Вход</h4>
         <div className="form-control">
-          <input
+          <Input
             type="text"
-            name="username"
-            placeholder="Username"
-            onChange={onChangeLogin}
+            placeholder="Введите ваш @mail"
+            value={email}
+            setValue={setEmail}
           />
         </div>
         <div className="form-control">
-          <input
+          <Input
             type="password"
-            placeholder="Enter password"
-            name="password"
-            onChange={onChangePassword}
+            placeholder="Пароль"
+            value={password}
+            setValue={setPassword}
           />
         </div>
-        <button type="submit" className="login-btn">
-          Login
-        </button>
-      </form>
+        <div className="login-nav__btn">
+          <button
+            className="login-btn"
+            onClick={() => dispatch(login(email, password))}
+          >
+            Войти
+          </button>
+          {!isAuth && (
+            <div>
+              <NavLink to="/registration">Регистрация</NavLink>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./cards.css";
 import "../../App.css";
 import Loader from "../common/Loader/Loader";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCards } from "../../store/async/cards";
 
 const Cards = ({ valueInput }) => {
-  const cardsInfo = useSelector((state) => state.cardData);
+  const cardsInfo = useSelector((state) => state.card.cards);
+  const dispatch = useDispatch();
+
+  useEffect(()=> {
+    dispatch(fetchCards())
+  },[])
 
   let notFound = false;
   const renderCard = cardsInfo
@@ -24,7 +30,7 @@ const Cards = ({ valueInput }) => {
       return (
         <a key={index} className="card-item dp-flex jc-betw" href="#">
           <div className="card-logo">
-            <img src={el.img} alt={el.headline}></img>
+            <img src={require(`../../assets/img/${el.img}.svg`)} alt={el.headline}></img>
           </div>
           <div className="card-info">
             <h3 className="card-title">{el.headline}</h3>
