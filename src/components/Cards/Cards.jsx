@@ -9,9 +9,9 @@ const Cards = ({ valueInput }) => {
   const cardsInfo = useSelector((state) => state.card.cards);
   const dispatch = useDispatch();
 
-  useEffect(()=> {
-    dispatch(fetchCards())
-  },[])
+  useEffect(() => {
+    dispatch(fetchCards());
+  }, []);
 
   let notFound = false;
   const renderCard = cardsInfo
@@ -30,7 +30,7 @@ const Cards = ({ valueInput }) => {
       return (
         <a key={index} className="card-item dp-flex jc-betw" href="#">
           <div className="card-logo">
-            <img src={require(`../../assets/img/${el.img}.svg`)} alt={el.headline}></img>
+            <img src={el.img} alt={el.headline}></img>
           </div>
           <div className="card-info">
             <h3 className="card-title">{el.headline}</h3>
