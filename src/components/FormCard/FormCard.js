@@ -12,10 +12,9 @@ const FormCard = ({ overlay, setHide }) => {
     headline: "",
     description: "",
     id: Math.random(),
-    img: "../../assets/img/spring-cloud.svg",
-
+    img: require("../../assets/img/spring-integration.svg").default,
   });
-  console.log(inputData);
+
   useEffect(() => {
     return () => {
       setHide(!overlay);
