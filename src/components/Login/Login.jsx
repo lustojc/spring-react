@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { login } from "../../store/async/auth";
+import { auth, login } from "../../store/async/auth";
 import Input from "../common/Input/Input";
 import "./Login.css";
 
 const Login = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.user.isAuth);
-  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

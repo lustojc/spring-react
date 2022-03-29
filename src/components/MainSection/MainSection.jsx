@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { auth } from "../../store/async/auth";
 import AddNewCard from "../AddNewCard/AddNewCard";
 import Cards from "../Cards/Cards";
 import Input from "../common/Input/Input";

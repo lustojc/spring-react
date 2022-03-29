@@ -6,10 +6,11 @@ import "./header.css";
 import { MenuItems } from "../MenuItems/MenuItems";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../store/reducers/authReducer";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const isAuth = useSelector(state => state.user.isAuth)
+  const isAuth = useSelector((state) => state.user.isAuth);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const Header = () => {
       document.body.style.overflow = "auto";
     }
   }, [isMobile]);
-  
+
   return (
     <header>
       <nav className="nav">
@@ -27,13 +28,12 @@ const Header = () => {
           <a className="mg-bt_20" href="">
             <img className="logo" src={logo} alt="Spring-logo" />
           </a>
-          
+
           <div id="navbar" className={isMobile ? "navbar-mobile" : "navbar"}>
             <div className="dp-flex jc-betw" id="dropdown">
               {isMobile ? (
                 <MobileMenu />
-              ) : 
-              (
+              ) : (
                 MenuItems.map((el, index) => {
                   return (
                     <Dropdown
@@ -45,7 +45,14 @@ const Header = () => {
                   );
                 })
               )}
-              {isAuth && <div className="exit__btn" onClick={ ()=> dispatch(logout())}>Выйти</div>}
+              {isAuth && (
+                <NavLink to="/">
+                  {" "}
+                  <div className="exit__btn" onClick={() => dispatch(logout())}>
+                    Выйти
+                  </div>{" "}
+                </NavLink>
+              )}
             </div>
           </div>
         </div>

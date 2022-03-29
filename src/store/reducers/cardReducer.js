@@ -9,11 +9,11 @@ export const cardReducer = (state = initialState, action) => {
     case GET_CARDS:
       return { ...state, cards: action.payload };
     case GET_USER_CARD:
-      return {cards: [action.payload, ...state.cards]}
+      return { cards: [action.payload, ...state.cards] };
     default:
       return state;
   }
 };
 
 export const getCards = (cards) => ({ type: GET_CARDS, payload: cards });
-export const getUserCards = (card) => ({ type: GET_USER_CARD, payload: card});
+export const getUserCards = (card) => ({ type: GET_USER_CARD, payload: card });
