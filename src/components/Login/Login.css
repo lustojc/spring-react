@@ -1,63 +1,69 @@
-  .App {
-    font-family: Uni Sans sans-serif;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
-    background: #262a2d;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.App {
+  font-family: Uni Sans sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background: #262a2d;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .App h1 {
-    color: #fff;
-    font-size: 52px;
-    padding-bottom: 50px;
-  }
+.App h1 {
+  color: #fff;
+  font-size: 52px;
+  padding-bottom: 50px;
+}
 
-  .App h1 span {
-    color: #059405;
-  }
-  
-  .login-form {
-    width: 600px;
-    padding: 20px 25px;
-    border-radius: 10px;
-    text-align: left;
-    background: #1b1f23;
-  }
-  
-  .form-title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: center;
-    color: #fff;
-    font-size: 30px;
-  }
-  
-  .form-control {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  .form-control input {
-    border-radius: 5px;
-    height: 40px;
-    width: 100%;
-    padding: 2px 10px;
-    border: 1px solid #059405;
-  }
-  
-  .login-btn {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    background: green;
-    color: #fff;
-    cursor: pointer;
-    
-  }
+.App h1 span {
+  color: #059405;
+}
+
+.login-form {
+  width: 600px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  text-align: left;
+  background: #1b1f23;
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-control div {
+  padding-left: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.form-control input {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  padding: 2px 10px;
+  border: 1px solid #059405;
+}
+
+.login-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background: green;
+  color: #fff;
+  cursor: pointer;
+}
 
 .login-nav__btn {
   display: flex;
@@ -67,10 +73,15 @@
 
 .login-nav__btn div {
   margin-left: 40px;
-  
 }
 
 .login-nav__btn div a {
   color: #fff;
   border-bottom: 1px solid #fff;
+}
+
+.errors-form {
+  color: red;
+  margin-left: 20px;
+  margin-top: 5px;
 }

@@ -5,7 +5,6 @@ const authRouter = require("./routes/auth.routes");
 const app = express();
 const PORT = config.get("serverPort");
 const corsMiddleware = require("./middleware/cors.middleware");
-const path = require("path");
 const cardRouter = require("./routes/cards.routes");
 
 app.use(corsMiddleware);

@@ -4,11 +4,12 @@ import thunk from "redux-thunk";
 
 import { authReducer } from "./authReducer";
 import { cardReducer } from "./cardReducer";
-
+import { errorReducer } from "./errorReducer";
 
 const rootReducer = combineReducers({
-    user: authReducer,
-    card: cardReducer,
+  user: authReducer,
+  card: cardReducer,
+  errors: errorReducer,
 });
 
 const store = createStore(

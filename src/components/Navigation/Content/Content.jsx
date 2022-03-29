@@ -5,11 +5,9 @@ const Content = ({ element, content, devTools }) => {
     <>
       {content.map((el, index) => {
         return (
-          <>
-            <a key={index} href="#">
-              {el}
-            </a>
-          </>
+          <a key={index} href="#">
+            {el}
+          </a>
         );
       })}
       {element.devTools ? (
